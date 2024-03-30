@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Dental Clinic</title>
+    <link rel="stylesheet" href="Clinic.css">
+    <script src="https://kit.fontawesome.com/8f82db20c9.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="pictures/Logo new.jpg" class="logo">
+            <ul id="sidemenu">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#Projects">Dental Treatments</a></li>
+                <li><a href="#contact">Contact</a></li>  
+                <i class="fa-solid fa-square-xmark" onclick="closemenu()"></i>
+            </ul>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text">
+            <p>DENTAL CLINIC</p>
+            <h1>Creating Smiles With A Gentle Touch Through Science And Artistry</h1>
+        </div>
+    </div>
+</div>
+<!------------about----------------->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="pictures/Clinic.jpg">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub title">About Us</h1>
+                <p>Our Dental Clinic is the best in Coimbatore. <br>With unique in its ambience, high-end technologies, and world-class treatments. <br>The clinic emphasizes an individual and professional approach to each patient. We provide advanced dental technology and comfortable, painless procedures. The clinic has experienced dentists who follow proper disinfection and sterilization procedures for infection control, ensuring patient care and preventing the transmission of infectious diseases.</p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-----------------services--------------------->
+<div id="services">
+    <div class="container">
+        <h1 class="sub title">Services</h1>
+        <div class="services-list">
+            <div>
+                <h2>Root Canal Treatment</h2>
+                <p>Root canals treat damaged or infected teeth, often causing pain. Modern dental advances and local anaesthetics make root canals less painful.</p>
+                <a href="#">Learn more</a>
+            </div>
+            <div>
+                <h2>Whitening / Bleaching</h2>
+                <p>Teeth whitening is a popular cosmetic dentistry treatment that offers a quick, affordable, and non-invasive way to enhance a smile.</p>
+                <a href="#">Learn more</a>
+            </div>
+            <div>
+                <h2>Dental Implants</h2>
+                <p>A dental implant is a titanium screw placed into the jawbone beneath the gums to replace missing teeth.</p>
+                <a href="#">Learn more</a>
+            </div>
+            <div>
+                 <h2>Orthodontics / Braces</h2>
+                <p>Braces are a common orthodontic treatment to correct misaligned teeth and jaw irregularities.</p>
+                <a href="#">Learn more</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!---------------Satisfied Patients----------->
+
+
+<div id="Projects">
+    <div class="container">
+        <h1 class="sub-title">Satisfied Patients</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="pictures/patient.jpg">
+                <div class="layer">
+                    <h3>Sheela</h3>
+                    <p>Satisfied with the hospital and the doctor as well as the nurse care like their own parent.</p>
+                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="https://voice.ons.org/sites/default/files/2018-12/1000_iStock-481073846.jpg">
+                <div class="layer">
+                    <h3>Raju</h3>
+                    <p>Treating for the Root Canal and for the teeth Whitening</p>
+                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="https://img.freepik.com/premium-photo/asian-female-patient-with-happiness-lying-bed-hospital_33413-1834.jpg">
+                <div class="layer">
+                    <h3>Swathi</h3>
+                    <p>Admitted for braces, Doctor is very friendly.</p>
+                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="btn">See more</a>
+    </div>
+</div>
+<!------------------contact----------->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Us</h1>
+                <p><i class="fa-solid fa-paper-plane"></i> dentalclinic.com</p>
+                <p><i class="fa-solid fa-mobile-button"></i> 999-234-1234</p>
+                <div class="social-icons">
+                    <a href=""><i class="fa-brands fa-instagram"></i></a>
+                    <a href=""><i class="fa-brands fa-twitter"></i></a>
+                    <a href=""><i class="fa-brands fa-facebook"></i></a>
+                </div>
+            </div>
+            <div>
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="" placeholder="You Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Thank you!!</p>
+    </div>
+</div>
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+<script>
+    var sidemenu = document.getElementById("sidemenu")
+    function openmenu(){
+        sidemenu.style.right = "0";
+    }
+    function closemenu(){
+        sidemenu.style.right = "-200px";
+    }
+</script>
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbzEf2Ezv6WmACS709jGI6yO2l6nW0LQ1dslOuiBlrPAfYx1dfnvkCCr5q2MBRcAHyHe/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Message sent successfully"
+            setTimeout(function(){
+                msg.innerHTML = ""
+            },5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+</body>
+</html>
